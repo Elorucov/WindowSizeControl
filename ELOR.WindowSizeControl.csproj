@@ -10,7 +10,7 @@
     <AssemblyName>wsc</AssemblyName>
     <AssemblyTitle>Window Size Control</AssemblyTitle>
     <StartupObject>ELOR.WindowSizeControl.Program</StartupObject>
-    <ProductVersion>1.0.1</ProductVersion>
+    <Version>1.0.1</Version>
     <FileVersion>1.0.1</FileVersion>
   </PropertyGroup>
 

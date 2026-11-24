@@ -175,14 +175,13 @@ namespace ELOR.WindowSizeControl
 
         private void ShowHelp()
         {
-            var assembly = Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly();
-            var productVersion = assembly
-                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
-                .InformationalVersion;
-            var version = productVersion?.Split('+')[0];
+            var processPath = Environment.ProcessPath;
+            var fileVersion = processPath is not null
+                ? FileVersionInfo.GetVersionInfo(processPath).FileVersion
+                : "N/A";
 
             StringBuilder text = new StringBuilder();
-            text.AppendLine($"Created by Elchin Orujov. Version {version}");
+            text.AppendLine($"Created by Elchin Orujov. Version {fileVersion}");
             text.AppendLine();
             text.AppendLine("The program allows you to resize windows and center them as you see fit.");
             text.AppendLine("The list displays only those windows available to the user that can be resized. If a selected window is minimized, it will be restored.");
