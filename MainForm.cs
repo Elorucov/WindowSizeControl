@@ -175,9 +175,11 @@ namespace ELOR.WindowSizeControl
 
         private void ShowHelp()
         {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-            string version = fileVersionInfo.ProductVersion;
+            var assembly = Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly();
+            var productVersion = assembly
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
+                .InformationalVersion;
+            var version = productVersion?.Split('+')[0];
 
             StringBuilder text = new StringBuilder();
             text.AppendLine($"Created by Elchin Orujov. Version {version}");
