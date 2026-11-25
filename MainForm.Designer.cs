@@ -133,10 +133,10 @@
             // 
             // resizeButton
             // 
-            resizeButton.Location = new Point(12, 158);
-            resizeButton.Margin = new Padding(3, 3, 3, 12);
+            resizeButton.Location = new Point(12, 156);
+            resizeButton.Margin = new Padding(3, 3, 3, 10);
             resizeButton.Name = "resizeButton";
-            resizeButton.Size = new Size(334, 29);
+            resizeButton.Size = new Size(334, 23);
             resizeButton.TabIndex = 8;
             resizeButton.Text = "Resize";
             resizeButton.UseVisualStyleBackColor = true;
@@ -144,10 +144,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(352, 158);
+            button1.Location = new Point(352, 156);
             button1.Margin = new Padding(3, 3, 12, 3);
             button1.Name = "button1";
-            button1.Size = new Size(100, 29);
+            button1.Size = new Size(100, 23);
             button1.TabIndex = 9;
             button1.Text = "Refresh list";
             button1.UseVisualStyleBackColor = true;
