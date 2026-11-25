@@ -1,6 +1,5 @@
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -137,9 +136,12 @@ namespace ELOR.WindowSizeControl
 
             if (centerAfterResize.Checked)
             {
+                int.TryParse(centerOffsetX.Text, out int offsetX);
+                int.TryParse(centerOffsetY.Text, out int offsetY);
+
                 Rectangle area = Screen.FromHandle(hWnd).WorkingArea;
-                x = area.Left + (area.Width - width) / 2;
-                y = area.Top + (area.Height - height) / 2;
+                x = (area.Left + (area.Width - width) / 2) + offsetX;
+                y = (area.Top + (area.Height - height) / 2) + offsetY;
             }
             else
             {
@@ -183,8 +185,10 @@ namespace ELOR.WindowSizeControl
             StringBuilder text = new StringBuilder();
             text.AppendLine($"Created by Elchin Orujov. Version {fileVersion}");
             text.AppendLine();
-            text.AppendLine("The program allows you to resize windows and center them as you see fit.");
-            text.AppendLine("The list displays only those windows available to the user that can be resized. If a selected window is minimized, it will be restored.");
+            text.AppendLine("The program lets you to resize windows and center them as you see fit.");
+            text.AppendLine("The list includes only those windows that can be resized. If a selected window is minimized, it will be restored.");
+            text.AppendLine();
+            text.AppendLine("You can also have the window centered on the screen after its size is changed by selecting the \"Move to center of the screen\" checkbox. If you would like the window to be shifted by a specific distance after being centered, enter that distance in the \"Apply offset after centering\" fields.");
 
             MessageBox.Show(this, text.ToString(), "Help & About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
