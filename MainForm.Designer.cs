@@ -59,10 +59,11 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.BackColor = SystemColors.Window;
-            label1.Location = new Point(17, 16);
+            label1.Location = new Point(15, 16);
+            label1.Margin = new Padding(0);
             label1.MinimumSize = new Size(92, 0);
             label1.Name = "label1";
-            label1.Size = new Size(168, 17);
+            label1.Size = new Size(172, 17);
             label1.TabIndex = 1;
             label1.Text = "Target window:";
             label1.TextAlign = ContentAlignment.TopRight;
@@ -81,10 +82,11 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.BackColor = SystemColors.Window;
-            label2.Location = new Point(17, 51);
+            label2.Location = new Point(15, 51);
+            label2.Margin = new Padding(0);
             label2.MinimumSize = new Size(92, 0);
             label2.Name = "label2";
-            label2.Size = new Size(168, 17);
+            label2.Size = new Size(172, 17);
             label2.TabIndex = 3;
             label2.Text = "Size:";
             label2.TextAlign = ContentAlignment.TopRight;
@@ -123,10 +125,11 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.BackColor = SystemColors.Window;
-            label4.Location = new Point(17, 83);
+            label4.Location = new Point(15, 83);
+            label4.Margin = new Padding(0);
             label4.MinimumSize = new Size(92, 0);
             label4.Name = "label4";
-            label4.Size = new Size(168, 17);
+            label4.Size = new Size(172, 17);
             label4.TabIndex = 7;
             label4.Text = "Move to center of the screen:";
             label4.TextAlign = ContentAlignment.TopRight;
@@ -176,12 +179,13 @@
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.BackColor = SystemColors.Window;
-            label6.Location = new Point(17, 115);
+            label6.Location = new Point(15, 115);
+            label6.Margin = new Padding(0);
             label6.MinimumSize = new Size(92, 0);
             label6.Name = "label6";
-            label6.Size = new Size(168, 17);
+            label6.Size = new Size(172, 17);
             label6.TabIndex = 11;
-            label6.Text = "Apply offset after centering  X:";
+            label6.Text = "Apply offset after centering X:";
             label6.TextAlign = ContentAlignment.TopRight;
             // 
             // centerOffsetX
